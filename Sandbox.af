@@ -9,6 +9,19 @@
     "PathToVivadoProject": null,
     "Tutorials": [
         ["Previous", ""],
-        ["RisingEdge", ""]
+        ["RisingEdge", ""],
+        ["Counter", ""],
+        ["AlwaysBlock", ""],
+        ["MemoryBlock", ""],
+        ["Calculate", ""],
+        ["Values", ""],
+        ["Routing", ""],
+        ["TestModule", ""],
+        ["Delay", ""],
+        ["If", ""],
+        ["Environment", ""],
+        ["DontProcess", ""],
+        ["InferClocks", ""],
+        ["AXI", ""]
     ]
 }
