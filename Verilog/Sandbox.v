@@ -1,25 +1,24 @@
 module Sandbox(
     /*[Clock]*/ input clk,
-    /*[Reset]*/ input reset,
-
-    input [15:0] input1,
-
-    output [15:0] output1
+    /*[Reset]*/ input reset
 );
 
 
 //***Using verbose item name
-/*[RisingEdge --signal input1]*/
-wire input1RisingEdge;
+wire wire1;
+/*[RisingEdge --signal wire1]*/
+wire wire1RisingEdgeWithItemName;
 
 
-//***Passing in the signal to track, inferred by position
-/*[RisingEdge input1]*/
-wire input1RisingEdgeByPosition;
+//***Using item position to identify the source
+wire wire2;
+/*[RisingEdge wire2]*/
+wire wire2RisingEdgeByPosition;
 
 
-//***Infer name, attached register starts with p1_
+//***Infer name, rising prefix tells Arctic Fox wire3 is the source
 //*****ICII'S FAVORITE**
+wire wire3;
 /*[RisingEdge]*/
-wire risingInput1;
+wire risingWire3;
 endmodule
