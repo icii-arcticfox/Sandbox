@@ -1,0 +1,1266 @@
+
+
+{
+    "folders": [
+        {
+            "path": "Automations"
+        },
+		
+
+		{
+			"path": "/workspaces/Sandbox/Verilog/"
+		},
+        {
+            "path": "Code"
+        },
+        {
+            "path": "vscode"
+        }
+    ],
+    "settings": {
+        "terminal.integrated.cwd": "./",
+        "editor.quickSuggestions": {
+            "comments": "on"
+        },
+        "editor.foldingStrategy": "auto",
+        "editor.defaultFoldingRangeProvider": "zokugun.explicit-folding",
+        "[verilog]": { 
+            "explicitFolding.rules": [
+                {
+                    "beginRegex": ".*",
+                    "whileRegex": "^\\s*\\/\\*\\<\\>\\*\\/",
+                    "autoFold": true,
+                    "bypassProtection": true
+                }
+            ]
+        },
+        "editor.renderWhitespace": "none",
+		"editor.foldingHighlight": false,
+        "editor.unicodeHighlight.allowedCharacters": {
+            "​": true
+        },
+
+        "highlight.regexes": {			
+		
+			"(/\\*)(\\[)(\\s*this(?:(?:\\[[^\\]]*\\])|[^\\]])?\\s*)(\\])(\\*/)((?:/\\*\\<\\>\\:\\*/)+\\s?)([^:]*(?:(?:\\[[^\\]]*\\])|[^\\]])?)((?:/\\*\\:\\<\\>\\*/)+)(.?)": { //this generated inline
+				"filterLanguageRegex": "verilog|cs",
+				"regexFlags": "g", 
+				"decorations": [ 
+					{ 
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+
+					
+					{ 
+						"color": "var(--vscode-searchEditor-textInputBorder)", //GeneratedValueSetting1
+
+						//"color": "var(--vscode-searchEditor-textInputBorder)", //GeneratedValueSetting2
+						//"isWholeLine":false, //GeneratedValueSetting2
+
+						
+						 //"opacity": "0%", //GeneratedValueSetting3
+						 //"letterSpacing": "-0.6em", //GeneratedValueSetting3
+
+						"fontWeight": "normal"
+					},
+					{ 
+						"color": "var(--vscode-searchEditor-textInputBorder)", //GeneratedValueSetting1
+
+						//"color": "darkcyan", //GeneratedValueSetting2
+						//"backgroundColor": "var(--vscode-editorSuggestWidget-background)", //GeneratedValueSetting2
+						//"isWholeLine":false, //GeneratedValueSetting2
+						
+						 //"opacity": "0%", //GeneratedValueSetting3
+						 //"letterSpacing": "-0.6em", //GeneratedValueSetting3
+
+
+						"fontWeight": "normal" 
+					},
+					{ 
+						"color": "var(--vscode-searchEditor-textInputBorder)", //GeneratedValueSetting1
+
+						//"color": "var(--vscode-searchEditor-textInputBorder)", //GeneratedValueSetting2
+						//"isWholeLine":false, //GeneratedValueSetting2
+
+						 //"opacity": "0%", //GeneratedValueSetting3
+						 //"letterSpacing": "-0.6em", //GeneratedValueSetting3
+						 //"backgroundColor": "var(--vscode-editorSuggestWidget-background)", //GeneratedValueSetting3
+
+
+						"fontWeight": "normal"
+					},
+
+
+
+
+					{ 
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+
+					
+					{
+						
+						 "backgroundColor": "var(--vscode-editor-hoverHighlightBackground)", //GeneratedValueSetting1
+
+						//"opacity": "0%", //GeneratedValueSetting2
+						//"letterSpacing": "-0.6em", //GeneratedValueSetting2
+
+						//"backgroundColor": "var(--vscode-editorSuggestWidget-background)", //GeneratedValueSetting3
+,
+					   "color": "darkcyan",
+					   "isWholeLine":false,
+					   "fontWeight": "normal"
+				   	},
+
+
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+					}
+				]
+			},
+		
+			"(this)(\\s|\\[)": { //This generated inline
+				"filterLanguageRegex": "verilog|cs",
+				"regexFlags": "gm", 
+				"decorations": [ 
+					{ 
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold"	
+					},
+					{
+					}
+				]
+			},
+
+			"(\\-\\-[^\\s\\]]+)": { //Value generated inline
+				"filterLanguageRegex": "verilog|cs",
+				"regexFlags": "gm", 
+				"decorations": [ 
+					{ 
+						"color": "var(--vscode-activityBarBadge-background)",
+						"fontWeight": "normal"	
+					}
+				]
+			},
+
+
+			"(/\\*)(\\[)(\\$(?:(?:\\[[^\\]]*\\])|[^\\]])*)(\\])(\\*/)((?:/\\*\\<\\>\\:\\*/\\s?)+)((?:(?:\\[[^\\]]*\\])|[^\\:])*)((?:/\\*\\:\\<\\>\\*/)+)( ?)": { //Value generated inline
+				"filterLanguageRegex": "verilog|cs",
+				"regexFlags": "gm", 
+				"decorations": [ 
+					{ 
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{ 
+						"color": "var(--vscode-searchEditor-textInputBorder)", //GeneratedValueSetting1
+
+						 //"color": "var(--vscode-searchEditor-textInputBorder)", //GeneratedValueSetting2
+						 //"isWholeLine":false, //GeneratedValueSetting2
+						
+						 //"opacity": "0%", //GeneratedValueSetting3
+						 //"letterSpacing": "-0.6em", //GeneratedValueSetting3
+
+						"fontWeight": "normal"
+					},
+					{ 
+						"color": "var(--vscode-searchEditor-textInputBorder)", //GeneratedValueSetting1
+
+						 //"color": "darkcyan", //GeneratedValueSetting2
+						 //"backgroundColor": "var(--vscode-editorSuggestWidget-background)", //GeneratedValueSetting2
+						 //"isWholeLine":false, //GeneratedValueSetting2
+						
+						 //"opacity": "0%", //GeneratedValueSetting3
+						 //"letterSpacing": "-0.6em", //GeneratedValueSetting3
+
+
+						"fontWeight": "normal" 
+					},
+					{ 
+						"color": "var(--vscode-searchEditor-textInputBorder)", //GeneratedValueSetting1
+
+						 //"color": "var(--vscode-searchEditor-textInputBorder)", //GeneratedValueSetting2
+						 //"isWholeLine":false, //GeneratedValueSetting2
+
+						 //"opacity": "0%", //GeneratedValueSetting3
+						 //"letterSpacing": "-0.6em", //GeneratedValueSetting3
+
+
+						"fontWeight": "normal"
+					},
+					{ 
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-searchEditor-textInputBorder)",
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						 "backgroundColor": "var(--vscode-editor-hoverHighlightBackground)", //GeneratedValueSetting1
+						
+						 //"opacity": "0%", //GeneratedValueSetting2
+						 //"letterSpacing": "-0.6em", //GeneratedValueSetting2
+
+						//"backgroundColor": "var(--vscode-editorSuggestWidget-background)", //GeneratedValueSetting3
+,
+						"color": "darkcyan",
+						"isWholeLine":false,
+						"fontWeight": "normal"
+					},
+					{
+						"color": "var(--vscode-searchEditor-textInputBorder)",
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"opacity": "100%",
+						"letterSpacing": "0em"
+					}
+				]
+			},
+			
+
+			"(\\$?)(\\$(?:(?:\\[[^\\]]*\\])|[^\\]\"\n\\,\\@\\s])+)": { //Value 
+				"filterLanguageRegex": "verilog|cs",
+				"regexFlags": "g", 
+				"decorations": [ 
+					{
+						"color": "darkcyan",
+						"fontWeight": "bold"					
+					},
+					{ 
+						"color": "darkcyan",
+						"fontWeight": "normal"
+					}
+				]
+			},
+					
+					
+			"\u200B\u200B\u200B\u200B\u200B": { //Hihglight line after moving to cursor
+				"filterLanguageRegex": "verilog",
+				"regexFlags": "gm", 
+				"decorations": [ 
+					{ 
+						"backgroundColor": "var(--vscode-list-focusAndSelectionOutline)",
+						"isWholeLine":true
+					}
+				]
+			},
+			
+			"(\\$)(\\$[^\\s\\]]*)": { //Value generated inline with $$
+				"filterLanguageRegex": "verilog|cs",
+				"regexFlags": "g", 
+				"decorations": [ 
+					{
+						"color": "darkcyan",
+						"fontWeight":"bold"					
+					},
+					{
+						"color": "darkcyan",
+						"fontWeight":"normal"
+					}
+				]
+			},
+			
+			"(\\$[^\\s\\]\"\\@\\']+)": { //Value generated inline
+				"filterLanguageRegex": "verilog|cs",
+				"regexFlags": "g", 
+				"decorations": [ 
+					{
+						"color": "darkcyan",
+						"fontWeight":"normal"
+ 					}
+				]
+			},
+			
+			
+			
+			"(//)(\\[)([^\\]\n\\,]+)(\\])(\\s*)(/\\*\\<\\>\\*/)(Not Processed:)([^\n]*)(\n)": { //Not processed
+				"filterLanguageRegex": "verilog", 
+				"regexFlags": "gm", 
+				"decorations": [ 
+					{ 
+						"opacity": "0%",
+						"letterSpacing": "-0.6em",
+						"fontWeight":"normal"
+					},
+					{ 
+						"color": "var(--vscode-editorIndentGuide-activeBackground)",
+						"fontStyle": "italic",
+						"fontWeight":"normal"
+					},
+					{ 
+						"color": "var(--vscode-editorIndentGuide-activeBackground)",
+						"fontStyle": "italic",
+						"fontWeight":"normal"
+					},
+					{ 
+						"color": "var(--vscode-editorIndentGuide-activeBackground)",
+						"fontStyle": "italic",
+						"fontWeight":"normal"
+					},
+					{
+					},
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em",
+						"fontWeight":"normal"
+					},
+					{ 
+						"color": "var(--vscode-editorIndentGuide-activeBackground)",
+						"fontStyle": "italic",
+						"fontWeight":"normal"
+					},
+					{
+						"color": "var(--vscode-editorIndentGuide-activeBackground)",
+						"fontStyle": "italic",
+						"fontWeight":"normal"
+					},
+					{
+					}
+				]
+			},
+			
+			
+			"(//)(\\[)([^\\]\n\\,]+)(\\])(\\s*)((?:/\\*\\<\\>\\*/)+)(\\s*)(//)(\\s*Ignored)": { //Ignored automation
+				"filterLanguageRegex": "verilog", 
+				"regexFlags": "g", 
+				"decorations": [ 
+					{ 
+						"opacity": "0%",
+						"letterSpacing": "-0.6em",
+						"fontWeight":"normal"
+					},
+					{ 
+						"color": "var(--vscode-editorIndentGuide-activeBackground)",
+						"fontStyle": "italic",
+						"fontWeight":"normal"
+					},
+					{ 
+						"color": "var(--vscode-editorIndentGuide-activeBackground)",
+						"fontStyle": "italic",
+						"fontWeight":"normal"
+					},
+					{ 
+						"color": "var(--vscode-editorIndentGuide-activeBackground)",
+						"fontStyle": "italic",
+						"fontWeight":"normal"
+					},
+					{
+					},
+					{ 
+						"opacity": "0%",
+						"letterSpacing": "-0.6em",
+						"fontWeight":"normal"
+					},
+					{
+
+					},
+					{ 
+						"opacity": "0%",
+						"letterSpacing": "-0.6em",
+						"fontWeight":"normal"
+					},
+					{
+						"color": "var(--vscode-editorIndentGuide-activeBackground)",
+						"fontStyle": "italic",
+						"fontWeight":"normal"
+					}
+				]
+			},
+			
+			"(/\\*)(\\[)([^\\]\n\\,]+)(\\])(\\*/)(\\s*)((?:/\\*\\<\\>\\*/)+)(\\s*)(//)(\\s*Ignored)": { //Ignored inline style automation
+				"filterLanguageRegex": "verilog", 
+				"regexFlags": "g", 
+				"decorations": [ 
+					{ 
+						"opacity": "0%",
+						"letterSpacing": "-0.6em",
+						"fontWeight":"normal"
+					},
+					{ 
+						"color": "var(--vscode-editorIndentGuide-activeBackground)",
+						"fontStyle": "italic",
+						"fontWeight":"normal"
+					},
+					{ 
+						"color": "var(--vscode-editorIndentGuide-activeBackground)",
+						"fontStyle": "italic",
+						"fontWeight":"normal"
+					},
+					{ 
+						"color": "var(--vscode-editorIndentGuide-activeBackground)",
+						"fontStyle": "italic",
+						"fontWeight":"normal"
+					},
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em",
+						"fontWeight":"normal"
+					},
+					{
+					},
+					{ 
+						"opacity": "0%",
+						"letterSpacing": "-0.6em",
+						"fontWeight":"normal"
+					},
+					{
+
+					},
+					{ 
+						"opacity": "0%",
+						"letterSpacing": "-0.6em",
+						"fontWeight":"normal"
+					},
+					{
+						"color": "var(--vscode-editorIndentGuide-activeBackground)",
+						"fontStyle": "italic",
+						"fontWeight":"normal"
+					}
+				]
+			},
+			
+			"(.)(/\\*\\<\\>\\*/)(\\s*)([^)\n]*)(\\))": { //In parenthesis
+				"filterLanguageRegex": "verilog", 
+				"regexFlags": "gm", 
+				"decorations": [ 
+					{
+					},
+					{ 
+						"color": "var(--vscode-editor-hoverHighlightBackground)",
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+					},
+					{
+						"backgroundColor": "var(--vscode-editor-hoverHighlightBackground)"
+					},
+					{
+					}
+				]
+			},
+			
+			
+			"((?:/\\*\\<\\>\\:\\*/)+)((?:(?:\\[[^\\]]*\\])|[^:])*)((?:/\\*\\:\\<\\>\\*/)+)(.?)": { //Generate inline
+				"filterLanguageRegex": "verilog", 
+				"regexFlags": "gm", 
+				"decorations": [ 
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"backgroundColor": "var(--vscode-editor-hoverHighlightBackground)",
+						"isWholeLine":false
+					},
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+					}
+				]
+			},
+			
+			"^((?:/\\*\\<\\>\\*/)+)(.*)": { //Generated line
+				"filterLanguageRegex": "verilog", 
+				"regexFlags": "gm", 
+				"decorations": [ 
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"backgroundColor": "var(--vscode-editor-hoverHighlightBackground)",
+						"isWholeLine":true
+					}
+				]
+			},
+			
+			"^((?:/\\*\\~\\<\\>\\*/)+)(.*)": {  //Sticky generated line
+				"filterLanguageRegex": "verilog", 
+				"regexFlags": "gm", 
+				"decorations": [ 
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"backgroundColor": "var(--vscode-editorSuggestWidget-background)",
+						"isWholeLine":true
+					} 
+				]
+			},
+			
+			
+			"(//)(\\[)(\\s*[^\\s\\]]*)(\\s*(?:(?:\\[[^\\]]*\\])|[^\\]\n\\,])*)(\\])( ?)": { //Whole line comment automation
+				"filterLanguageRegex": "verilog|cs",
+				"regexFlags": "g", 
+				"decorations": [ 
+					{ 
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{ 
+						"color": "var(--vscode-searchEditor-textInputBorder)",
+						"fontWeight": "normal"
+					},
+					{ 
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold"
+					},
+					{ 
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "normal"
+					},
+					{ 
+						"color": "var(--vscode-searchEditor-textInputBorder)",
+						"fontWeight": "normal"
+					},
+					{
+						"opacity": "100%",
+						"letterSpacing": "0em"
+					}
+				]
+			},
+
+
+			
+			
+			"(\\/\\*)(\\[)(\\s*[^\\s\\]]*)(\\s*(?:(?:\\[[^\\]]*\\])|[^\\]\n\\,])*)(\\])(\\*\\/)( ?)": { //Inline automation 
+				"filterLanguageRegex": "verilog|cs",
+				"regexFlags": "g", 
+				"decorations": [ 
+					{ 
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{ 
+						"color": "var(--vscode-searchEditor-textInputBorder)",
+						"fontWeight": "normal"
+					},
+					{ 
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold"
+					},
+					{ 
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "normal"
+					},
+					{ 
+						"color": "var(--vscode-searchEditor-textInputBorder)",
+						"fontWeight": "normal"
+					},
+					{ 
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{ 
+						"opacity": "100%",
+						"letterSpacing": "0em"
+					}
+				]
+			},
+			
+			
+			
+			
+			"(/\\*)(\\[)([^\\]\n\\,]*)(\\])(\\*/)(\\s*)((?:/\\*\\<\\>\\*/)+)(.*)((?:/\\*\\<\\>\\*/)+)": { //Inline automation with generated text
+				"filterLanguageRegex": "verilog", 
+				"regexFlags": "g", 
+				"decorations": [ 
+					{ 
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{ 
+						"color": "var(--vscode-searchEditor-textInputBorder)",
+						"fontWeight": "normal"
+					},
+					{ 
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold"
+					},
+					{ 
+						"color": "var(--vscode-searchEditor-textInputBorder)",
+						"fontWeight": "normal"
+					},
+					{ 
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+					},
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"backgroundColor": "var(--vscode-editor-hoverHighlightBackground)",
+					},
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					}
+				]
+			},
+			
+			"(//)(ISSUE\\:)": { //Issue line
+				"filterLanguageRegex": "verilog", 
+				"regexFlags": "gm", 
+				"decorations": [ 
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "#C12000",
+						"backgroundColor": "#F4C9C9",
+						"isWholeLine":true,
+						"fontStyle": "italic"
+					}
+				]
+			},
+			
+			"(//\\*\\*\\*)(Base:)([^\n]+)(\n)": { //Base
+				"filterLanguageRegex": "verilog", 
+				"regexFlags": "gm", 
+				"decorations": [ 
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-editorIndentGuide-activeBackground)",
+						"fontStyle": "italic",
+						"backgroundColor": "var(--vscode-editor-inactiveSelectionBackground)",
+						"isWholeLine":true,
+					},
+					{
+					}
+				]
+			},
+			"(//\\*\\*\\*)(Members:)([^\n]+)(\n)": { //Members
+				"filterLanguageRegex": "verilog", 
+				"regexFlags": "gm", 
+				"decorations": [ 
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-editorIndentGuide-activeBackground)",
+						"fontStyle": "italic",
+						"backgroundColor": "var(--vscode-editor-inactiveSelectionBackground)",
+						"isWholeLine":true,
+					},
+					{
+					}
+				]
+			},
+			
+			"(//\\*\\*\\*)([^\n]+)(\n)": { //Note
+				"filterLanguageRegex": "verilog", 
+				"regexFlags": "gm", 
+				"decorations": [ 
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-editorIndentGuide-activeBackground)", //TODO NOTE
+						"fontStyle": "italic"
+					},
+					{
+					}
+				]
+			},
+			
+			"(//)(Info\\:)": { //Info
+				"filterLanguageRegex": "verilog", 
+				"regexFlags": "gm", 
+				"decorations": [ 
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-editorIndentGuide-activeBackground)",
+						"backgroundColor": "var(--vscode-notebook-cellBorderColor)",
+						"isWholeLine":true,
+						"fontStyle": "italic"
+					}
+				]
+			},
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			"(//)(\\[)([^\\]\n]*)(\n)(\\/\\/)([^\\]\n]*)(\\s*)(\\])": { 
+				"filterLanguageRegex": "verilog", 
+				"regexFlags": "g", 
+				"decorations": [ 
+					{ 
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{ 
+						"color": "var(--vscode-searchEditor-textInputBorder)",
+						"fontWeight": "normal"
+					},
+					{ 
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{ 
+						"color": "var(--vscode-searchEditor-textInputBorder)",
+						"fontWeight": "normal"
+					},
+				]
+			},
+			
+			
+			"(//)(\\[)([^\\]\n]*)(\n)(\\/\\/)([^\\]\n]*)(\n)(\\/\\/)([^\\]\n]*)(\\s*)(\\])": { 
+				"filterLanguageRegex": "verilog", 
+				"regexFlags": "g", 
+				"decorations": [ 
+					{ 
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{ 
+						"color": "var(--vscode-searchEditor-textInputBorder)",
+						"fontWeight": "normal"
+					},
+					{ 
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{ 
+						"color": "var(--vscode-searchEditor-textInputBorder)",
+						"fontWeight": "normal"
+					},
+				]
+			},
+			
+			
+			"(//)(\\[)([^\\]\n]*)(\n)(\\/\\/)([^\\]\n]*)(\n)(\\/\\/)([^\\]\n]*)(\n)(\\/\\/)([^\\]\n]*)(\\s*)(\\])": { 
+				"filterLanguageRegex": "verilog", 
+				"regexFlags": "g", 
+				"decorations": [ 
+					{ 
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{ 
+						"color": "var(--vscode-searchEditor-textInputBorder)",
+						"fontWeight": "normal"
+					},
+					{ 
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{ 
+						"color": "var(--vscode-searchEditor-textInputBorder)",
+						"fontWeight": "normal"
+					},
+				]
+			},
+			
+			
+			"(//)(\\[)([^\\]\n]*)(\n)(\\/\\/)([^\\]\n]*)(\n)(\\/\\/)([^\\]\n]*)(\n)(\\/\\/)([^\\]\n]*)(\n)(\\/\\/)([^\\]\n]*)(\\s*)(\\])": { 
+				"filterLanguageRegex": "verilog", 
+				"regexFlags": "g", 
+				"decorations": [ 
+					{ 
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{ 
+						"color": "var(--vscode-searchEditor-textInputBorder)",
+						"fontWeight": "normal"
+					},
+					{ 
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{ 
+						"color": "var(--vscode-searchEditor-textInputBorder)",
+						"fontWeight": "normal"
+					},
+				]
+			},
+			
+			
+			
+			"(//)(\\[)([^\\]\n]*)(\n)(\\/\\/)([^\\]\n]*)(\n)(\\/\\/)([^\\]\n]*)(\n)(\\/\\/)([^\\]\n]*)(\n)(\\/\\/)([^\\]\n]*)(\n)(\\/\\/)([^\\]\n]*)(\\s*)(\\])": { 
+				"filterLanguageRegex": "verilog", 
+				"regexFlags": "g", 
+				"decorations": [ 
+					{ 
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{ 
+						"color": "var(--vscode-searchEditor-textInputBorder)",
+						"fontWeight": "normal"
+					},
+					{ 
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{ 
+						"color": "var(--vscode-searchEditor-textInputBorder)",
+						"fontWeight": "normal"
+					},
+				]
+			},
+			
+			
+			"(//)(\\[)([^\\]\n]*)(\n)(\\/\\/)([^\\]\n]*)(\n)(\\/\\/)([^\\]\n]*)(\n)(\\/\\/)([^\\]\n]*)(\n)(\\/\\/)([^\\]\n]*)(\n)(\\/\\/)([^\\]\n]*)(\n)(\\/\\/)([^\\]\n]*)(\\s*)(\\])": { 
+				"filterLanguageRegex": "verilog", 
+				"regexFlags": "g", 
+				"decorations": [ 
+					{ 
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{ 
+						"color": "var(--vscode-searchEditor-textInputBorder)",
+						"fontWeight": "normal"
+					},
+					{ 
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{ 
+						"color": "var(--vscode-searchEditor-textInputBorder)",
+						"fontWeight": "normal"
+					},
+				]
+			},
+			
+			
+			"(//)(\\[)([^\\]\n]*)(\n)(\\/\\/)([^\\]\n]*)(\n)(\\/\\/)([^\\]\n]*)(\n)(\\/\\/)([^\\]\n]*)(\n)(\\/\\/)([^\\]\n]*)(\n)(\\/\\/)([^\\]\n]*)(\n)(\\/\\/)([^\\]\n]*)(\n)(\\/\\/)([^\\]\n]*)(\\s*)(\\])": { 
+				"filterLanguageRegex": "verilog", 
+				"regexFlags": "g", 
+				"decorations": [ 
+					{ 
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{ 
+						"color": "var(--vscode-searchEditor-textInputBorder)",
+						"fontWeight": "normal"
+					},
+					{ 
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold",
+					},
+					{ 
+						"color": "var(--vscode-searchEditor-textInputBorder)",
+						"fontWeight": "normal"
+					},
+				]
+			},
+			
+			
+		},
+		"highlight.maxMatches":"5000"
+
+
+    }
+}
+		
