@@ -1,1 +1,14 @@
-{"VSCodeWorkspaceFile":"Sandbox.code-workspace","ArcticFoxVersion":"0.2.1.156","ProjectName":"Sandbox","GeneratedLineIdentifier":"<>","VerilogFolders":["/workspaces/Sandbox/Verilog/"],"PathToVivadoProject":null,"Tutorials":null}
+{
+    "VSCodeWorkspaceFile": "Sandbox.code-workspace",
+    "ArcticFoxVersion": "0.2.1.156",
+    "ProjectName": "Sandbox",
+    "GeneratedLineIdentifier": "<>",
+    "VerilogFolders": [
+        "/workspaces/Sandbox/Verilog/"
+    ],
+    "PathToVivadoProject": null,
+    "Tutorials": [
+        ["Previous", ""],
+        ["RisingEdge", ""]
+    ]
+}
