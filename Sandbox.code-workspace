@@ -28,7 +28,7 @@
             "explicitFolding.rules": [
                 {
                     "beginRegex": ".*",
-                    "whileRegex": "^\\s*\\/\\*\\<\\>\\*\\/",
+                    "whileRegex": "^\\s*((\\/\\*\\<\\>\\*\\/)|(\\/\\/\\*\\*\\*))",
                     "autoFold": true,
                     "bypassProtection": true
                 }
