@@ -1,10 +1,6 @@
 module Sandbox(
     /*[Clock]*/ input clk,
-    /*[Reset]*/ input reset,
-
-    input [15:0] input1,
-    
-    output [15:0] output1
+    /*[Reset]*/ input reset
 );
 
 
