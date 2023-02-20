@@ -5,22 +5,22 @@ module Sandbox(
 
 
 //***Using verbose item name
-/*[Previous --signal input1]*/
-reg input1Previous;
+/*[Previous --signal wire1]*/
+reg wire1Previous;
 
 
-//***Passing in the signal to track, inferred by position
-/*[Previous input1]*/
-reg input1Previous;
+//***Using item position to identify the signal
+wire wire2;
+/*[Previous wire2]*/
+reg wire2Previous;
 
 
-//***Infer name, attached register starts with p1_
+//***Infer name, p1_ prefix tells Arctic Fox wire3 is the signal
+//***In the second Previous, p2_ prefix tell Arctic Fox it is the second previous, and p1_wire3 is the signal
 //*****ICII'S FAVORITE**
+wire wire3;
 /*[Previous]*/
-reg p1_input1;
-//***You can build on successive Previous automations by incrementting the suffix to p2_
+reg p1_wire3;
 /*[Previous]*/
-reg p2_input1;
-
-
+reg p2_wire3;
 endmodule
