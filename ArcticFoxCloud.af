@@ -1,0 +1,10 @@
+{
+    "VSCodeWorkspaceFile": "ArcticFoxCloud.code-workspace",
+    "ArcticFoxVersion": "0.0.1",
+    "ProjectName": "TestProject",
+    "GeneratedLineIdentifier": "<>",
+    "VerilogFolders": [
+        "/workspaces/codespace/Verilog"
+    ],
+    "PathToVivadoProject": null
+}
