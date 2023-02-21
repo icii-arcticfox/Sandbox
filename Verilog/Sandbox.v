@@ -34,7 +34,7 @@ reg [31:0] countReg;
 /*[always countReg]*/ begin
     if(reset)
         /*[<= 0]*/
-    else if(resetToInital)
+    else if(re  setToInital)
         /*[<= initialValue]*/
     else if(increment)
         /*[<= this + 1]*/
