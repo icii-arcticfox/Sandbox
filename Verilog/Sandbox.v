@@ -25,8 +25,6 @@ module Sandbox(
 //***  see the clock name added to the always block
 
 wire flipBias;
-
-
 reg currentBias;
 always@(posedge) begin
     if(reset)
@@ -50,4 +48,6 @@ always@(posedge) begin
     else
         dynamicBias <= dynamicBias;
 end
+
+
 endmodule
