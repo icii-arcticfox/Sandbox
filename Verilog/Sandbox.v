@@ -25,7 +25,7 @@ module Sandbox(
 //***about t_his automation, we were able to just copy and paste the equation into the automation.
 
 //***In the generated code, all of the multiplications happen at the same time, then, the additions
-//*** are pipelined in the always blocks. 
+//*** are pipelined in the always blocks.
 
 reg [7:0] x1;
 reg [7:0] x2;
@@ -37,6 +37,4 @@ reg [7:0] y3;
 
 /*[Calculate x1*y1 + x2*y2 + x3*y3]*/
 wire [15:0] result;
-
-
 endmodule
