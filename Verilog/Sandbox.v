@@ -8,23 +8,14 @@ module Sandbox(
 );
 
 
-//***Using verbose item name
-/*[Previous --signal input1]*/
-reg input1Previous;
+//***The memory block automation, /*[always.memory]*/ is similar to the always automation and make similar
+//***use of the non-blocking automation, /*[<=]*/. This time however, the non-blocking auotmation will infer
+//***from the use as to which memory signals to set and how to set them.
+
+//***Please note, /*[always.memory]*/ currently supports true dual port memories. Future iterations will 
+//***increase the supported memories. 
 
 
-//***Passing in the signal to track, inferred by position
-/*[Previous input1]*/
-reg input1Previous;
-
-
-//***Infer name, attached register starts with p1_
-//*****ICII'S FAVORITE**
-/*[Previous]*/
-reg p1_input1;
-//***You can build on successive Previous automations by incrementting the suffix to p2_
-/*[Previous]*/
-reg p2_input1;
 
 
 endmodule
