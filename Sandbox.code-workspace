@@ -28,7 +28,7 @@
             "explicitFolding.rules": [
                 {
                     "beginRegex": ".*",
-                    "whileRegex": "^\\s*\\/\\*\\<\\>\\*\\/",
+                    "whileRegex": "^\\s*((\\/\\*\\<\\>\\*\\/)|(\\/\\/\\*\\*\\*))",
                     "autoFold": true,
                     "bypassProtection": true
                 }
@@ -40,7 +40,24 @@
             "​": true
         },
 
-        "highlight.regexes": {			
+        "highlight.regexes": {	
+			
+		
+		
+			"(t)(_)(his)": { //This generated inline
+				"filterLanguageRegex": "verilog|cs",
+				"regexFlags": "gm", 
+				"decorations": [ 
+					{
+					},
+					{ 
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+					}
+				]
+			},
 		
 			"(/\\*)(\\[)(\\s*this(?:(?:\\[[^\\]]*\\])|[^\\]])?\\s*)(\\])(\\*/)((?:/\\*\\<\\>\\:\\*/)+\\s?)([^:]*(?:(?:\\[[^\\]]*\\])|[^\\]])?)((?:/\\*\\:\\<\\>\\*/)+)(.?)": { //this generated inline
 				"filterLanguageRegex": "verilog|cs",
@@ -112,7 +129,6 @@
 						//"letterSpacing": "-0.6em", //GeneratedValueSetting2
 
 						//"backgroundColor": "var(--vscode-editorSuggestWidget-background)", //GeneratedValueSetting3
-,
 					   "color": "darkcyan",
 					   "isWholeLine":false,
 					   "fontWeight": "normal"
@@ -537,6 +553,48 @@
 				]
 			},
 
+			
+			
+			"(//X\\*\\*\\*)(\\/\\*)(\\[)(\\s*[^\\s\\]]*)(\\s*(?:(?:\\[[^\\]]*\\])|[^\\]\n\\,])*)(\\])(\\*\\/)( ?)": { //Inline automation for Display / Teaching
+				"filterLanguageRegex": "verilog|cs",
+				"regexFlags": "g", 
+				"decorations": [ 
+					{ 
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{ 
+						"opacity": "100%",
+						"letterSpacing": "0em"
+					},
+					{ 
+						"opacity": "100%",
+						"color": "var(--vscode-editor-foreground)",
+						"letterSpacing": "0em"
+					},
+					{ 
+						"color": "var(--vscode-editor-foreground)",
+						"fontWeight": "bold"
+					},
+					{ 
+						"opacity": "100%",
+						"letterSpacing": "0em"
+					},
+					{ 
+						"opacity": "100%",
+						"color": "var(--vscode-editor-foreground)",
+						"letterSpacing": "0em"
+					},
+					{ 
+						"opacity": "100%",
+						"letterSpacing": "0em"
+					},
+					{ 
+						"opacity": "100%",
+						"letterSpacing": "0em"
+					}
+				]
+			},
 
 			
 			
@@ -681,8 +739,43 @@
 						"letterSpacing": "-0.6em"
 					},
 					{
-						"color": "var(--vscode-editorIndentGuide-activeBackground)", //TODO NOTE
+						"color": "var(--vscode-editorIndentGuide-activeBackground)",
 						"fontStyle": "italic"
+					},
+					{
+					}
+				]
+			},
+			
+			"(//_\\*\\*\\*)([^\n]+)(\n)": { //Step line for tutorials
+				"filterLanguageRegex": "verilog", 
+				"regexFlags": "gm", 
+				"decorations": [ 
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)", 
+						"backgroundColor": "palegreen",
+						"isWholeLine":true
+					},
+					{
+					}
+				]
+			},
+			
+			"(//S\\*\\*\\*)([^\n]+)(\n)": { //Section Header
+				"filterLanguageRegex": "verilog", 
+				"regexFlags": "gm", 
+				"decorations": [ 
+					{
+						"opacity": "0%",
+						"letterSpacing": "-0.6em"
+					},
+					{
+						"color": "var(--vscode-editor-foreground)", 
+						"textDecoration": "underline",
 					},
 					{
 					}
