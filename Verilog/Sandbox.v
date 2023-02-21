@@ -24,7 +24,13 @@ module TestColorModifier;
 //***Now, let's use the TestModule automation to create the skeleton of a test for the ColorModifier module.
 
 /*[TestModule --module ColorModifier]*/
+
+
+
 endmodule
+
+
+
 module ColorModifier(
     /*[Clock 50 MHz]*/ input clk,
     /*[Reset]*/ input reset,
