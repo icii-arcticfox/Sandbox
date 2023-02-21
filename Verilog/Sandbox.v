@@ -7,7 +7,7 @@ module Sandbox(
 wire startingWithCommentsWasCausingAnIssue_TemporaryWire;
 
 //S***Routing signals
-//***The description here got pretty long, hand with us and you'll be able to see what we love about the 
+//***The description here got pretty long, hand with us and you'll be able to see what we love about the
 //***routing automation.
 
 //***Routing signals through a design is one of the tasks that can easily be underestimated. If a system has
@@ -38,23 +38,27 @@ wire startingWithCommentsWasCausingAnIssue_TemporaryWire;
 //***design without having to continually retype the clock and reset automations.
 
 //***To use the routing automation, or formally called /*[Import]*/, you just use /*[.ModuleName]*/ followed my your wire
-//***definition. You can see t_his below in module BA with the following line: 
+//***definition. You can see t_his below in module BA with the following line:
 //***/*[.ABA]*/ wire aba;
-//***ABA is the module that the source is routed from, and since no name is given, the same name, aba is assumbed, 
-//***and the signal is routed to wire aba in module ABA. 
 
-//***You can also route a signal with a different start and stop name as follows: 
+
+//***ABA is the module that the source is routed from, and since no name is given, the same name, aba is assumbed,
+//***and the signal is routed to wire aba in module ABA.
+
+//***You can also route a signal with a different start and stop name as follows:
 //***/*[.ABA myStartWire]*/ wire aba;
-//***Here, the signal myStartWire in module ABA will be routed to wire aba in the current module that contains the 
-//***automation and wire definition. 
 
-//***There are many other options when using the routing automation, flopping the signal, delaying the signal, 
+
+//***Here, the signal myStartWire in module ABA will be routed to wire aba in the current module that contains the
+//***automation and wire definition.
+
+//***There are many other options when using the routing automation, flopping the signal, delaying the signal,
 //***one to many routing, many to one routing, etc., but for now, we are just focused on showing you the basics of
-//***one to one signal routing. 
+//***one to one signal routing.
 
 //***Lastly, you'll notice that the module declarations have nothing wired to their ports before running Arctic Fox
-//***and applying the automations. This is because, once you start using the routing automation efficiently, you no 
-//***longer need to manually route connections, Arctic Fox does it for you. 
+//***and applying the automations. This is because, once you start using the routing automation efficiently, you no
+//***longer need to manually route connections, Arctic Fox does it for you.
 
 //***Play around with the code below, add wires, route new wires, etc. and get a feel for automated routing!
 
