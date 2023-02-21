@@ -4,7 +4,7 @@ module Sandbox(
 );
 
 
-//***This sandbox uses that always automation and non-blocking automation together
+//***This sandbox uses the always automation and non-blocking automation together
 
 
 //S***Traditional Use
