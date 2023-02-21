@@ -1,30 +1,19 @@
 module Sandbox(
     /*[Clock]*/ input clk,
-    /*[Reset]*/ input reset,
-
-    input [15:0] input1,
-    
-    output [15:0] output1
+    /*[Reset]*/ input reset
 );
 
 
-//***Using verbose item name
-/*[Previous --signal input1]*/
-reg input1Previous;
+//***As we developed automations, we realized that we needed to be able to "turn off" automations.
+//***This led use to create the Don't Process notation. Placing an exclamation point, ! , at the
+//***start of an automation will prevent the automation from being processed. You can see t_his
+//***below in the Previous and RisingEdge automations.
 
+wire [15:0] incomingData;
+/*[!Previous]*/
+reg [15:0] p1_incomingData;
 
-//***Passing in the signal to track, inferred by position
-/*[Previous input1]*/
-reg input1Previous;
-
-
-//***Infer name, attached register starts with p1_
-//*****ICII'S FAVORITE**
-/*[Previous]*/
-reg p1_input1;
-//***You can build on successive Previous automations by incrementting the suffix to p2_
-/*[Previous]*/
-reg p2_input1;
-
-
+wire detectPulse;
+/*[!RisingEdge]*/
+wire risingDetectPulse;
 endmodule
