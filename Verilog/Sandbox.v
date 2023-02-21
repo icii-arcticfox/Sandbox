@@ -4,7 +4,12 @@ module Sandbox(
 );
 
 
+wire startingWithCommentsWasCausingAnIssue_TemporaryWire;
+
 //S***Routing signals
+//***The description here got pretty long, hand with us and you'll be able to see what we love about the 
+//***routing automation.
+
 //***Routing signals through a design is one of the tasks that can easily be underestimated. If a system has
 //***only a few modules, or litte hierarchy, it's not a huge issue. But, when the hierarchy grows, or, you
 //***have to make changes, and sometimes, very large changes, routing and re-routing can become a huge pain!
@@ -26,11 +31,35 @@ module Sandbox(
 //***Additionally, each submodule connects to clk and reset from the top level module Sandbox. Not demonstrated, but
 //***what often happens, is that a top level module is named by a Value, so if the top level module changes, all
 //***clock and reset signals will instantly be routed to from a different module. Furthermore, routing to a signal
-//***that has a Clock or Reset automation attached will apply those properties to the receiving module. This is 
+//***that has a Clock or Reset automation attached will apply those properties to the receiving module. This is
 //***demonstrated in module BB where a Previous automation is used. The always block for p1_bb uses the clk and
-//***reset signals even though the Clock and Reset automations are not used within the module directly. The whole 
-//***point of t_his - you can define your clock and reset automations / signals in one spot, and use it through your 
+//***reset signals even though the Clock and Reset automations are not used within the module directly. The whole
+//***point of t_his - you can define your clock and reset automations / signals in one spot, and use it through your
 //***design without having to continually retype the clock and reset automations.
+
+//***To use the routing automation, or formally called /*[Import]*/, you just use /*[.ModuleName]*/ followed my your wire
+//***definition. You can see t_his below in module BA with the following line: 
+//***/*[.ABA]*/ wire aba;
+//***ABA is the module that the source is routed from, and since no name is given, the same name, aba is assumbed, 
+//***and the signal is routed to wire aba in module ABA. 
+
+//***You can also route a signal with a different start and stop name as follows: 
+//***/*[.ABA myStartWire]*/ wire aba;
+//***Here, the signal myStartWire in module ABA will be routed to wire aba in the current module that contains the 
+//***automation and wire definition. 
+
+//***There are many other options when using the routing automation, flopping the signal, delaying the signal, 
+//***one to many routing, many to one routing, etc., but for now, we are just focused on showing you the basics of
+//***one to one signal routing. 
+
+//***Lastly, you'll notice that the module declarations have nothing wired to their ports before running Arctic Fox
+//***and applying the automations. This is because, once you start using the routing automation efficiently, you no 
+//***longer need to manually route connections, Arctic Fox does it for you. 
+
+//***Play around with the code below, add wires, route new wires, etc. and get a feel for automated routing!
+
+
+A instanceA(
 );
 
 
