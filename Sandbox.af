@@ -18,7 +18,6 @@
         ["Routing", ""],
         ["TestModule", ""],
         ["Delay", ""],
-        ["If", ""],
         ["Environment", ""],
         ["DontProcess", ""],
         ["InferClocks", ""],
