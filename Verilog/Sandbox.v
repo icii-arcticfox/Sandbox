@@ -31,7 +31,7 @@ module Sandbox(
 //***- Change the Environments from Simulation to FPGATesting, run Arctic Fox, and see
 //***  that the Asserts no longer generate Verilog
 
-/*[Environments Simulation]*/
+/*[Environments FPGATesting]*/
 
 reg [7:0] detectedTemperature;
 reg [7:0] gain;
@@ -40,4 +40,5 @@ reg [7:0] bias;
 /*[Assert detectedTemperature * gain + bias < 180]*/
 
 /*[Assert detectedTemperature * gain + bias > 20]*/
+
 endmodule
