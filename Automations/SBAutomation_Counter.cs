@@ -47,8 +47,75 @@ public class SBAutomation_Counter : VerilogAutomation
         //Get the name of the clock for the module
         string clockName = Module.PrimaryClock.Name;
 
-        //Set the CodeAfterNext depending on what items were given
+
+//***************************************************************
+//***************** Add Base and Member Values ******************
+//***************************************************************
+//The following code presents to the uset the Values that are created
+//It also creates signals for the automation
+
+//The main code generation will occur in the following section
+
+        CodeBase += $"${reg.Name}";
+
+        if(noMax && Items.Contains("Event"))
+            CodeMembers += $"$.event";
+        else if(noMax)
+            CodeMembers += $"$.start";
+        else 
+            CodeMembers += $"$.countTo, $.start, $.done";
+
+        Code codePlace = CodeAfterNext;            
+     
+        if(noMax) { } 
+        else if(Module.ContainsVariableOrParameter(countTo) || countTo.IsNumber())
+            codePlace += $@"
+/*[${reg.Name}.countTo {countTo}]*/";
+        else if(countTo.Contains(' '))
+            codePlace += $@"
+/*[${reg.Name}.countTo]*/ wire {reg.Width} {reg.Name + CountSuffix};
+assign {reg.Name + CountSuffix} = {countTo};";
+        else
+            codePlace += $@"
+/*[${reg.Name}.countTo]*/  wire {reg.Width} {countTo};";
+
+        if(Items.Contains("Event") && countEvent != Module.PrimaryClock.Name)
+            codePlace += $@"
+/*[${reg.Name}.event {countEvent}]*/";
+        else if(Module.ContainsVariableOrParameter(startSignal) || startSignal.IsNumber())
+            codePlace += $@"
+/*[${reg.Name}.start {startSignal}]*/";
+        else if(startSignal.Contains(' '))
+            codePlace += $@"
+/*[${reg.Name}.start]*/ wire {reg.Name + StartSuffix};
+assign {reg.Name + StartSuffix} = {startSignal};";
+        else
+            codePlace += $@"
+/*[${reg.Name}.start]*/ wire {startSignal};";
+
+        if(noMax) { }
+        else if(Module.ContainsVariableOrParameter(doneSignal) || doneSignal.IsNumber())
+            codePlace += $@"
+/*[${reg.Name}.done {doneSignal}]*/";
+        else
+            codePlace += $@"
+/*[${reg.Name}.done]*/ wire {doneSignal};";
+
+
+        
+//***************************************************************
+//******************* Generate Counter Logic ********************
+//***************************************************************
+
+        //Set/append to the CodeAfterNext depending on what items were given
         //CodeAfterNext generates code after then next code clause
+
+        //Other Code insertion points are: 
+            // CodeAfterAutomation += "";
+            // CodeModuleStart += "";
+            // CodeModuleEnd += "";
+        
+        
 
         //Normal condition, counting each clock cycle and not unbounded 
         if(countEvent == Module.PrimaryClock.Name && !noMax)
@@ -114,54 +181,6 @@ end";
 
 
 
-//***************************************************************
-//***************** Add Base and Member Values ******************
-//***************************************************************
-//The following code presents to the uset the Values that are created
-        CodeBase += $"${reg.Name}";
-
-        if(noMax && Items.Contains("Event"))
-            CodeMembers += $"$.event";
-        else if(noMax)
-            CodeMembers += $"$.start";
-        else 
-            CodeMembers += $"$.countTo, $.start, $.done";
-
-        Code codePlace = CodeAfterNext;            
-     
-        if(noMax) { } 
-        else if(Module.ContainsVariableOrParameter(countTo) || countTo.IsNumber())
-            codePlace += $@"
-/*[${reg.Name}.countTo {countTo}]*/";
-        else if(countTo.Contains(' '))
-            codePlace += $@"
-/*[${reg.Name}.countTo]*/ wire {reg.Width} {reg.Name + CountSuffix};
-assign {reg.Name + CountSuffix} = {countTo};";
-        else
-            codePlace += $@"
-/*[${reg.Name}.countTo]*/  wire {reg.Width} {countTo};";
-
-        if(Items.Contains("Event") && countEvent != Module.PrimaryClock.Name)
-            codePlace += $@"
-/*[${reg.Name}.event {countEvent}]*/";
-        else if(Module.ContainsVariableOrParameter(startSignal) || startSignal.IsNumber())
-            codePlace += $@"
-/*[${reg.Name}.start {startSignal}]*/";
-        else if(startSignal.Contains(' '))
-            codePlace += $@"
-/*[${reg.Name}.start]*/ wire {reg.Name + StartSuffix};
-assign {reg.Name + StartSuffix} = {startSignal};";
-        else
-            codePlace += $@"
-/*[${reg.Name}.start]*/ wire {startSignal};";
-
-        if(noMax) { }
-        else if(Module.ContainsVariableOrParameter(doneSignal) || doneSignal.IsNumber())
-            codePlace += $@"
-/*[${reg.Name}.done {doneSignal}]*/";
-        else
-            codePlace += $@"
-/*[${reg.Name}.done]*/ wire {doneSignal};";
 	}
 
     public const string StartSuffix = "Start";
