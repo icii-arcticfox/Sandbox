@@ -1,0 +1,29 @@
+{
+    "VSCodeWorkspaceFile": "Sandbox.code-workspace",
+    "ArcticFoxVersion": "0.2.1.156",
+    "ProjectName": "Sandbox",
+    "GeneratedLineIdentifier": "<>",
+    "VerilogFolders": [
+        "/workspaces/Sandbox/Verilog/"
+    ],
+    "PathToVivadoProject": null,
+    "Tutorials": [
+        ["Previous", ""],
+        ["RisingEdge", ""],
+        ["Counter", ""],
+        ["AlwaysBlock", ""],
+        ["MemoryBlock", ""],
+        ["Calculate", ""],
+        ["Values", ""],
+        ["Routing", ""],
+        ["TestModule", ""],
+        ["Delay", ""],
+        ["Environment", ""],
+        ["DontProcess", ""],
+        ["InferClocks", ""],
+        ["AXI", ""],
+        ["SBAutomation_Counter", ""]
+    ],
+    "SectionNames" : "Sandboxes",
+    "SectionSubTitles" : " Select sandbox and press Switch"
+}

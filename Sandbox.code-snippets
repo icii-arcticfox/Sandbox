@@ -1,0 +1,13 @@
+{
+"basic counter, @reg": {
+    "scope": "verilog",
+    "prefix": ["[SBAutomation_Counter]"],
+    "body": [
+        "[SBAutomation_Counter${1|\u200B, string:count, --count string:countTo|}${2|\u200B, string:start, --start string:startSignal|}${3|\u200B, string:done, --done string:doneSignal|}${4|\u200B, string:event, --event string:countEvent|}"
+    ],
+    "description": [
+        "Creates a counter that counts to a certain constant or variable when start is received, produces done when finished"
+    ]
+},
+
+}
