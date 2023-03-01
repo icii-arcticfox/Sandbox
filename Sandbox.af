@@ -21,7 +21,8 @@
         ["Environment", ""],
         ["DontProcess", ""],
         ["InferClocks", ""],
-        ["AXI", ""]
+        ["AXI", ""],
+        ["SBAutomation_Counter", ""]
     ],
     "SectionNames" : "Sandboxes",
     "SectionSubTitles" : " Select sandbox and press Switch"
