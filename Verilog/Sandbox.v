@@ -35,6 +35,6 @@ reg [7:0] y1;
 reg [7:0] y2;
 reg [7:0] y3;
 
-/*[Calculate x1*y1 + x2*y2 + x3*y3]*/
+/*[Calculate x1*y1 + x2*y2 - x3*y3*y2]*/
 wire [15:0] result;
 endmodule
