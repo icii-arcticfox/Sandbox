@@ -114,8 +114,7 @@ assign {reg.Name + StartSuffix} = {startSignal};";
             // CodeAfterAutomation += "";
             // CodeModuleStart += "";
             // CodeModuleEnd += "";
-        
-        
+            // CodeModulePortList += "";
 
         //Normal condition, counting each clock cycle and not unbounded 
         if(countEvent == Module.PrimaryClock.Name && !noMax)
