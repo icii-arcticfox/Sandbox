@@ -1,17 +1,15 @@
-# Arctic Fox Cloud Template
+# Arctic Fox Sandbox
 <p align="center">
-    <img src="https://icii.io/wp-content/uploads/2022/09/New-Arctic-Fox-Logo.Blue_.For-Animation.WithBehindForGaps-1.svg" alt="Arctic Fox Logo" style="width:300px;"/>
+    <img src="https://icii.io/wp-content/uploads/2023/03/Arctic-Fox.Sandbox.svg" alt="Arctic Fox Logo" style="width:300px;"/>
 </p>
 
-This repo is designed to serve as a template for new Arctic Fox cloud projects. This project is completely empty and will take on the name of the parent repo after using the template / forked / imported. Follow the steps below to create an empty Artic Fox cloud project.
+Welcome to the Arctic Fox sandbox! Here, you can play around with different automations in a Codespace. This gives you realtime feedback on applying changes and experimenting with automations. 
 
-## Steps 
-1) Use one of the following methods to create a matching repository within your Github account 
-- Template. Click Template, and then select either
-  - "Create a new repository" to immediately create the repo in your account, or
-  - "Open in a codespace" to open the repo, but you will need to push to a new repo later 
-- Import this repo, please refer to [this guide](https://docs.github.com/en/get-started/importing-your-projects-to-github/importing-source-code-to-github/importing-a-repository-with-github-importer) for imoprt questions
-- Fork this repo, **make sure to uncheck main branch only** 
-2) Launch the repo in a codespace, wait for the codespace to finish building and extensions finish installing
-3) Click the Arctic Fox silhouette on the left, click Activate Arctic Fox on the bottom of the Arctic Fox panel, and enter your Arctic Fox email and password, press Activate (enter not yet supported...) 
-- Once you activate Arctic Fox, the Visual Studio Code window will reload. Once the reload is finish, you are ready to go!
+# Setup
+Refer to <a href="https://github.com/icii-arcticfox/TutorialHome#how-to-use-tutorials/" target="_blank">Tutorial How To</a> to start the Sandbox and switch between automations. 
+
+# Automations
+Different automations are used in various groups in the sandbox. When you open the Arctic Fox pane, and you have activated Arctic Fox, the drop down list will allow you to select different sandbox environments. Within each environment, 1 or more automations will be used. The theme of the environment will follow the name given in the drop down. 
+
+# Feedback
+When using the sandbox we ask that you provide feedback to Icii on your experience with Arctic Fox. As you experiment with automations, please think about the areas of your HDL design / testing process that could benefit from automation. Our goal is to make your development faster and easier! 
