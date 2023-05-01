@@ -13,6 +13,8 @@
         ["Counter", ""],
         ["AlwaysBlock", ""],
         ["MemoryBlock", ""],
+        ["Sequence", ""],
+        ["Sequence_MemoryBlock", ""],
         ["Calculate", ""],
         ["Values", ""],
         ["Routing", ""],
