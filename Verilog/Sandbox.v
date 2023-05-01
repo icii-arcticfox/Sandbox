@@ -2,16 +2,12 @@ module Sandbox(
     /*[Clock]*/ input clk,
     /*[Reset]*/ input reset,
 
-    input writeTrigger,
-    input readTrigger,
-    input [127:0] dataToStore
+    input trigger
 );
 
 
-//***The memory block SEQUENCE automation, /*[sequence.memory]*/, is very similar to the /*[sequence]*/
-//***automation, except that its actions are done with respect to a memory element rather than
-//***a variable. This automation will enable you to perform a series of memory actions. Each
-//***memory action will be performed in subsequent clock cycles. Furthermore, a memory block
+//***The Sequence automation, /*[sequence]*/, will enable you to perform a series of actions. Each
+//***action will be performed in subsequent clock cycles. Furthermore, a 
 //***sequence will wait until a specified trigger is seen, and will then continue one clock
 //***cycle after another until the sequence is finished.
 
@@ -38,6 +34,8 @@ module Sandbox(
 /*[RisingEdge]*/
 wire risingWriteTrigger;
 
+reg [15:0] sum;
+
 /*[sequence.memory --name myMemory --port A --trigger risingWriteTrigger]*/ begin
     /*[<= dataToStore[31:0] => 1]*/
     /*[<= dataToStore[63:32] => 2]*/
@@ -46,17 +44,4 @@ wire risingWriteTrigger;
 end
 
 
-//***For Port B, the sandbox module will receive a readTrigger. This will cause Port B to read out
-//***addresses 1, 2, 3, and 4. Additionally, again, we only want the sequence to trigger on the rising
-//***edge of readTrigger, so we will first decect the rising edge of readTrigger.
-
-/*[RisingEdge]*/
-wire risingReadTrigger;
-
-/*[sequence.memory --name myMemory --port B --trigger risingReadTrigger]*/ begin
-    /*[<= 1]*/
-    /*[<= 2]*/
-    /*[<= 3]*/
-    /*[<= 4]*/
-end
 endmodule
