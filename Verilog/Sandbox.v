@@ -1,11 +1,3 @@
-module Sandbox(
-    /*[Clock 100 MHz]*/ input clk,
-    /*[Reset]*/ input reset
-);
-
-
-wire startingWithCommentsWasCausingAnIssue_TemporaryWire;
-
 //S***Routing signals
 //***The description here got pretty long, hand with us and you'll be able to see what we love about the
 //***routing automation.
@@ -20,6 +12,50 @@ wire startingWithCommentsWasCausingAnIssue_TemporaryWire;
 //***in fully custom designs, we wanted routing to be way, way easier. We wanted to just mark the endpoint of
 //***a route and say, get the signal from t_his other module or module instance. So that's what we created.
 
+
+//S***Simple Example
+//***First, we present a simple example of a module with two child modules - child1 and child2. Then, we show
+//***how autorouting can wire signals from one child to the other, through the parent. The Parent module is the 
+//***top module and Parent instantiates both Child1 and Child2 within itslef. Then, Child1 and Child2 each need
+//***a signal from the other. Below, they each autoroute the signal using the /*[.ModuleName]*/ automation. This 
+//***route the signal following the automation from the stated module to the current location. Give it a try 
+//***and look at signals that are routed from Child1 to Child 2 and visa versa. 
+module Parent();
+
+                                                                                                                                                                                       
+Child1 child1 (
+);
+
+Child2 child2 (
+);
+endmodule
+
+
+module Child1(
+);
+
+wire child1_startComputation;
+wire child1_computationComplete;
+
+/*[.Child2]*/
+wire child2_multiplyingValues;
+endmodule
+
+
+module Child2(
+);
+
+wire child2_addingValues;
+wire child2_multiplyingValues;
+
+/*[.Child1]*/
+wire child1_computationComplete;
+endmodule
+
+
+
+
+//S***Longer Example
 //***In t_his example, modules A and B are instantiated directly under Sandbox. Modules AA amd AB are instantiated
 //***under module A, ABA, ABB, and ABC are instantiated under AB, etc. as the pattern describes. Each module
 //***creates one wire with a name equal to the lowercase equivalent of the module name. Module ABA has a wire aba,
@@ -61,6 +97,10 @@ wire startingWithCommentsWasCausingAnIssue_TemporaryWire;
 //***longer need to manually route connections, Arctic Fox does it for you.
 
 //***Play around with the code below, add wires, route new wires, etc. and get a feel for automated routing!
+module Sandbox(
+    /*[Clock 100 MHz]*/ input clk,
+    /*[Reset]*/ input reset
+);
 
 
 A instanceA(
